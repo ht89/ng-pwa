@@ -12,7 +12,8 @@
           "/*.js"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -22,6 +23,32 @@
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
       }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "apiRequests",
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "performance"
+      },
+      "urls": [
+        "https://www.techiediaries.com/api/data.json"
+      ]
+    },
+    {
+      "name": "assetRequests",
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "performance"
+      },
+      "urls": [
+        "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "/manifest.json"
+      ]
     }
   ]
 }
